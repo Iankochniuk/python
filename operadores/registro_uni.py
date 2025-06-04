@@ -1,11 +1,15 @@
-print("Bienvenido al imalaya")
+print("Bienvenido al Himalaya")
+
 edad = int(input("Ingresa tu edad: "))
 
-if edad >= 18 and edad < 80:
-    estudios_secundarios = input("¿Termini sus estudios secundariso si/no ?")
-    if estudios_secundarios == "Si ":
-        print("Puede registrarce. ")
+if 18 <= edad < 80:
+    estudios_secundarios = input("¿Terminaste tus estudios secundarios? (si/no): ").strip().lower()
+
+    if estudios_secundarios == "si":
+        print("Puede registrarse.")
+    elif estudios_secundarios == "no":
+        print("Lo sentimos, debe completar los estudios secundarios para registrarse.")
     else:
-        print("Puede registrarce. ")     
-else:        
-     print("No puedes iscribirte a la unid")
+        print("Respuesta no válida. Por favor, escriba 'si' o 'no'.")
+else:
+    print("No puedes inscribirte a la universidad.")
